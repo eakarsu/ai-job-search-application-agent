@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+data/tailored-resumes/*
+!data/tailored-resumes/.gitkeep
+
