@@ -1,6 +1,14 @@
-# Job Search and Application Agent
+# CareerFlow AI - Job Search and Application Agent
 
-A separate application for finding recently posted jobs, tailoring a verified master resume to each job, completing multistep applications, and tracking every submission.
+A separate Next.js application patterned after the `homeServices` project: public landing page, responsive sidebar dashboard, cards, tables, modal workflows, and mobile navigation. Its domain is finding recent jobs, tailoring a verified master resume to each job, completing multistep applications, and tracking every submission.
+
+## Run locally
+
+```bash
+./start.sh
+```
+
+The default URL is `http://127.0.0.1:3075`. Override it with `FRONTEND_PORT`.
 
 ## Intended workflow
 
@@ -15,8 +23,9 @@ A separate application for finding recently posted jobs, tailoring a verified ma
 
 ## Project layout
 
-- `frontend/` - candidate profile, job review, resume comparison, and application tracking UI
-- `backend/` - job ingestion, matching, resume tailoring, application workflows, and APIs
+- `src/app/` - landing page and candidate dashboard routes
+- `src/components/` - shared HomeServ-style navigation and UI
+- `src/lib/` - normalized domain data and application types
 - `browser-workers/` - site-specific application adapters
 - `data/master-resumes/` - source resumes supplied by the candidate
 - `data/tailored-resumes/` - one immutable output folder per job application
@@ -35,4 +44,3 @@ Applications can also end as `Skipped`, `Withdrawn`, `Rejected`, or `Closed`.
 - Job-specific answers and resumes use verified profile evidence.
 - The system does not infer disability status from individual conditions or descriptions.
 - New or ambiguous questions pause the workflow and are saved after the candidate answers.
-
