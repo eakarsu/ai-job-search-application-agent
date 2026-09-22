@@ -26,7 +26,7 @@ export default function Sidebar() {
           <Link href="/dashboard" className="flex items-center gap-2"><span className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center"><BriefcaseIcon className="w-5 h-5 text-white"/></span><span className="font-bold text-xl">CareerFlow AI</span></Link>
           <button aria-label="Close navigation" onClick={()=>setOpen(false)} className="lg:hidden"><XMarkIcon className="w-5 h-5"/></button>
         </div>
-        <nav className="flex-1 px-4 py-4 space-y-1 overflow-y-auto">{navigation.map(item=>{const active=pathname===item.href||(item.href!='/dashboard'&&pathname.startsWith(item.href));return <Link key={item.name} href={item.href} onClick={()=>setOpen(false)} className={`sidebar-link ${active?'active':''}`}><item.icon className="w-5 h-5"/><span>{item.name}</span>{item.name==='Questions'&&<span className="ml-auto badge badge-warning">2</span>}</Link>})}</nav>
+        <nav className="flex-1 px-4 py-4 space-y-1 overflow-y-auto">{navigation.map(item=>{const active=pathname===item.href||(item.href!='/dashboard'&&pathname.startsWith(item.href));return <Link key={item.name} href={item.href} onClick={()=>setOpen(false)} className={`sidebar-link ${active?'active':''}`}><item.icon className="w-5 h-5"/><span>{item.name}</span></Link>})}</nav>
         <div className="border-t border-gray-200 p-4"><div className="flex items-center gap-3"><div className="w-10 h-10 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-semibold">EA</div><div><p className="text-sm font-medium">Erol Akarsu</p><p className="text-xs text-gray-500">Candidate profile</p></div></div></div>
       </div>
     </aside>

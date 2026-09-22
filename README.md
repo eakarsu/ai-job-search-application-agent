@@ -39,6 +39,8 @@ Applications can also end as `Skipped`, `Withdrawn`, `Rejected`, or `Closed`.
 
 ## Profile rules
 
+- The profile uses eight sections covering contact information, work authorization, job preferences, experience, education, skills, voluntary disclosures, and common employer screening questions.
+- Approved answers form a reusable question bank for LinkedIn-style and employer-site application steps.
 - The candidate supplies all identity, demographic, work authorization, veteran, disability, salary, relocation, and availability answers.
 - Sensitive answers are stored separately and used only when the candidate has authorized their use.
 - Job-specific answers and resumes use verified profile evidence.
